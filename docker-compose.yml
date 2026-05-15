@@ -1,0 +1,13 @@
+services:
+  portfolio:
+    image: ghcr.io/messier333/portfolio:latest
+    container_name: portfolio
+    ports:
+      - "8050:8000"
+    environment:
+      PROFILE_NAME: "portfolio-name"
+      CONTENT_DIR: "/docs"
+      DEFAULT_MD: "portfolio.md"
+    volumes:
+      - {docs}:/docs:ro
+    restart: unless-stopped
