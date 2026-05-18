@@ -6,6 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import FileResponse
 from fastapi import HTTPException
+
 import os
 import markdown
 
@@ -81,3 +82,8 @@ def serve_file(filename: str):
             "Content-Disposition": f'inline; filename="{file_path.name}"'
         }
     )
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
