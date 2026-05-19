@@ -90,7 +90,7 @@ def health():
 
 @app.get("/test")
 def health():
-    return {"Hello, world!"}
+    return {"Hello, world.!"}
 
 
 
