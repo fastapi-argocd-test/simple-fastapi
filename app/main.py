@@ -87,3 +87,8 @@ def serve_file(filename: str):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+@app.get("/test1")
+def health():
+    return {"status": "test"}
